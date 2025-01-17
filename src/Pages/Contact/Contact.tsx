@@ -1,8 +1,8 @@
-import React from 'react'
+import Title from '../../Components/Context/Title'
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <Title context="Contact" />
   )
 }
 

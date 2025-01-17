@@ -1,8 +1,8 @@
-import React from 'react'
+import Title from '../../Components/Context/Title'
 
 function About() {
   return (
-    <div>About</div>
+    <Title context="About" />
   )
 }
 

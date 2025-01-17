@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavLink } from 'react-router'
+import CustomNavigate from '../Utilities/CustomNavigate'
+
 
 function Nav() {
   return (
@@ -8,52 +8,16 @@ function Nav() {
         <nav>
             <ul>
                 <li>
-                    <NavLink to="/" className={({isActive}) =>
-                     `
-                    text-3xl md:text-2xl font-bold
-                    ${isActive ? 
-                        " text-light-accent dark:text-dark-accent" :
-                        " text-light-primary dark:text-dark-primary"
-                    }
-                    hover:text-light-secondary dark:hover:text-dark-secondary
-                    `
-                    }>Home</NavLink>
+                    <CustomNavigate to="/" context="Home" />
                 </li>
                 <li>
-                    <NavLink to="/projects" className={({isActive}) =>
-                    `
-                    text-3xl md:text-2xl font-bold
-                    ${isActive ? 
-                        " text-light-accent dark:text-dark-accent" :
-                        " text-light-primary dark:text-dark-primary"
-                    }
-                    hover:text-light-secondary dark:hover:text-dark-secondary
-                    `
-                    }>Projects</NavLink>
+                    <CustomNavigate to="/projects" context="Projects" />
                 </li>
                 <li>
-                <NavLink to="/about" className={({isActive}) =>
-                    `
-                    text-3xl md:text-2xl font-bold
-                    ${isActive ? 
-                        " text-light-accent dark:text-dark-accent" :
-                        " text-light-primary dark:text-dark-primary"
-                    }
-                    hover:text-light-secondary dark:hover:text-dark-secondary
-                    `
-                    }>About</NavLink>
+                    <CustomNavigate to="/about" context="About" />
                 </li>
                 <li>
-                    <NavLink to="/contact" className={({isActive}) =>
-                    `
-                    text-3xl md:text-2xl font-bold
-                    ${isActive ? 
-                        " text-light-accent dark:text-dark-accent" :
-                        " text-light-primary dark:text-dark-primary"
-                    }
-                    hover:text-light-secondary dark:hover:text-dark-secondary
-                    `
-                    }>Contact</NavLink>
+                    <CustomNavigate to="/contact" context="Contact" />
                 </li>
             </ul>
         </nav>

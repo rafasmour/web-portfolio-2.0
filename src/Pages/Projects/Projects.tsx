@@ -1,8 +1,9 @@
 import React from 'react'
+import Title from '../../Components/Context/Title'
 
 function Projects() {
   return (
-    <div>Projects</div>
+    <Title context="Projects" />
   )
 }
 
