@@ -6,13 +6,10 @@ import { Outlet } from 'react-router'
 import ThemeToggleButton from './Components/Utilities/ThemeToggleButton'
 
 
-
 function Layout() {
   return (
-      <div className="grid grid-cols-12 w-full m-0 min-h-screen">
+      <div className="grid grid-cols-12 w-full m-0 min-h-screen bg-light-background dark:bg-dark-background">
         <div className="hidden md:block md:col-span-1">
-          a
-          {/* Insert dark light mode and some identification of my name */}
         </div>
         <div className="col-span-11 md:col-span-10">
           <main>

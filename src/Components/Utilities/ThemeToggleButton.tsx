@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+const ThemeToggleButton: React.FC = () => {
+  const systemDefaultTheme: boolean = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [dark, setDark] = React.useState(systemDefaultTheme);
 
-const ThemeToggleButton = () => {
+    const darkModeHandler = () => {
+        setDark(!dark);
+        document.body.classList.toggle("dark");
+    }
+    useEffect(() => {
+      if(systemDefaultTheme)
+        darkModeHandler();
+    }, []);
     return (
       <>
-        <label htmlFor="check" className='relative inline-flex items-center cursor-pointer'>
-            <input type="checkbox" id="check" className="sr-only  peer" />
-            <div className="w-11 h-6 bg-light-background peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-dark-accent dark:peer-focus:"></div>
-            <span className='w-2/5 h-4/5 bg-light-background fixed rounded-full peer-checked:bg-dark-background peer-checked:left-11'></span>
+        <label htmlFor="toggleTheme" className=" w-5 h-9 flex p-1 cursor-pointer rounded-full overflow-hidden border-2 border-light-secondary dark:border-dark-secondary bg-white-accent dark:bg-dark-accent " onClick={() => darkModeHandler()}>
+          <input type="checkbox" name="" id="" checked={dark} className="sr-only peer" readOnly />
+          <span className="  bg-light-secondary dark:bg-dark-secondary rounded-full w-3 h-3 peer-checked:translate-y-full transition ease"></span>  
         </label>
       </>
-    );
-  };
+    );  
+};
 
 export default ThemeToggleButton
