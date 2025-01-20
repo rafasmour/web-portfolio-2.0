@@ -12,9 +12,9 @@ const ThemeToggleButton: React.FC = () => {
     }, [dark]);
     return (
       <>
-        <label htmlFor="toggleTheme" className="mx-auto w-5 h-9 flex p-1 cursor-pointer rounded-full overflow-hidden border-2 border-light-secondary dark:border-dark-secondary bg-light-accent dark:bg-dark-accent " onClick={() => setDark(!dark)}>
+        <label htmlFor="toggleTheme" className="mx-auto w-16 min-h-8  flex px-2 py-1 cursor-pointer rounded-full overflow-hidden border-2 border-light-secondary dark:border-dark-secondary bg-light-accent dark:bg-dark-accent " onClick={() => setDark(!dark)}>
           <input type="checkbox" name="" id="" checked={dark} className="sr-only peer" readOnly />
-          <span className="  bg-light-secondary dark:bg-dark-secondary rounded-full w-3 h-3 peer-checked:translate-y-full transition ease"></span>  
+          <span className="  bg-light-secondary dark:bg-dark-secondary rounded-full w-6 h-6 peer-checked:translate-x-full  transition ease"></span>  
         </label>
       </>
     );  

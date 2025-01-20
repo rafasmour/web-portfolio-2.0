@@ -1,5 +1,6 @@
 import CustomNavigate from '../Utilities/CustomNavigate'
 import { ChangeEvent, useState } from "react";
+import ThemeToggleButton from '../Utilities/ThemeToggleButton';
 
 const Nav: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -27,6 +28,9 @@ const Nav: React.FC = () => {
                     </li>
                     <li onClick={() => setMenuOpen(false)}>
                         <CustomNavigate to="/contact" context="Contact" />
+                    </li>
+                    <li>
+                        <ThemeToggleButton />
                     </li>
                 </ul>
             </nav>
