@@ -12,10 +12,7 @@ function Nav() {
             <nav>
                 <input id="menu-toggle" name="menu-toggle" checked={menuOpen} type="checkbox" onChange={handleCheckboxChange} className="hidden" />
                 <label htmlFor="menu-toggle" className="text-2xl cursor-pointer text-light-primary dark:text-dark-primary block">&#9776;</label>
-                <ul className={`absolute w-40 min-h-full flex flex-col gap-5 bg-light-background dark:bg-dark-background translate-x-full  ${menuOpen ? 'block' : 'hidden'}`}>
-                    <li>
-                        <label htmlFor="menu-toggle" className="text-2xl cursor-pointer text-light-primary dark:text-dark-primary block">x</label>
-                    </li>
+                <ul className={`absolute w-40 min-h-full flex flex-col justify-around bg-light-background dark:bg-dark-background left-100 ${menuOpen ? 'block' : 'hidden'}`}>
                     <li>
                         <CustomNavigate to="/" context="Home" />
                     </li>
