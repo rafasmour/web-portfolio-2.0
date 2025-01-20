@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router'
 
-function CustomNavigate({to, context} : {to: string, context: string}) {
+const CustomNavigate: React.FC<{to: string, context: string}> = ({to, context}) => {
   return (
     <NavLink to={to} className={({isActive}) =>
         `

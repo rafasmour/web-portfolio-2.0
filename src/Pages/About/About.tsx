@@ -1,6 +1,6 @@
 import Title from '../../Components/Context/Title'
 
-function About() {
+const About: React.FC = () => {
   return (
     <Title context="About" />
   )

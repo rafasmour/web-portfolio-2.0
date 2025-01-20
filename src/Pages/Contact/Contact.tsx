@@ -1,6 +1,6 @@
 import Title from '../../Components/Context/Title'
 
-function Contact() {
+const Contact: React.FC = () => {
   return (
     <Title context="Contact" />
   )

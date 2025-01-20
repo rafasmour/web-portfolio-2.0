@@ -4,7 +4,7 @@ import { Outlet } from 'react-router'
 import Features from './Components/Utilities/Features'
 
 
-function Layout() {
+const Layout: React.FC = () => {
   return (
       <div className="grid grid-cols-12 w-full m-0 min-h-screen bg-light-background dark:bg-dark-background ">
         <div className="hidden md:flex md:flex-col md:col-span-1 items:start items-center">

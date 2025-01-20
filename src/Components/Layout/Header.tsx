@@ -1,7 +1,7 @@
 import CustomNavigate from '../Utilities/CustomNavigate'
 import { ChangeEvent, useState } from "react";
 
-function Nav() {
+const Nav: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {
         setMenuOpen(e.target.checked);
