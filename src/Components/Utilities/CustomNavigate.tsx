@@ -5,7 +5,7 @@ function CustomNavigate({to, context} : {to: string, context: string}) {
   return (
     <NavLink to={to} className={({isActive}) =>
         `
-       text-2xl md:text-xl font-bold
+       text-5xl md:text-5xl font-bold text-center
        ${isActive ? 
            " text-light-accent dark:text-dark-accent" :
            " text-light-primary dark:text-dark-primary"
