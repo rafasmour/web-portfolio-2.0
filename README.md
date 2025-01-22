@@ -11,8 +11,6 @@ This repository represents a complete overhaul of my personal portfolio website.
 
 ## Features
 
-* React Server-Side Rendering: Optimized performance.
-
 * TypeScript Integration: Enhanced type checking and code quality.
 
 * TailwindCSS Styling: Sleek, responsive design.
