@@ -24,10 +24,11 @@ const httpLink: ApolloLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
+  const token = import.meta.env.VITE_GITHUB_ACCESS_TOKEN;
   return {
     headers: {
       ...headers,
-      authorization: `Bearer ${import.meta.env.VITE_APP_GITHUB_TOKEN}`,
+      authorization: token ? `Bearer ${token}` : "",
     }
   }
 });
@@ -51,6 +52,10 @@ const GET_REPOS = gql`
             stargazers {
               totalCount
             }
+            primaryLanguage {
+              name
+            }
+            description
           }
         }
       }
@@ -61,12 +66,13 @@ const GET_REPOS = gql`
 
 export const GitReposProvider = ({ children }: { children: ReactNode }) => {
   const [repos, setRepos] = useState<GitRepo[]>([]);
-
   useEffect(() => {
     const fetchRepos = async () => {
       try {
         const { data } = await client.query({ query: GET_REPOS });
-        setRepos(data.viewer.repositories.nodes);
+        const { user } = data;
+        const pinnedItems: GitRepo[] = user.pinnedItems.edges.map(edge => edge.node);
+        setRepos(pinnedItems);
       } catch (err) {
         console.error(err);
       }
