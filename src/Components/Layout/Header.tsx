@@ -14,7 +14,7 @@ const Nav: React.FC = () => {
             <nav>
                 <input id="menu-toggle" name="menu-toggle" checked={menuOpen} type="checkbox" onChange={handleCheckboxChange} className="hidden" />
                 <label htmlFor="menu-toggle" className="text-3xl cursor-pointer text-light-primary dark:text-dark-primary block text-center">&#9776;</label>
-                <ul className={`absolute w-full min-h-full flex flex-col justify-center text-center gap-10 bg-light-background dark:bg-dark-background transition duration-300 ease-in-out top-0 left-0   ${menuOpen ? "translate-x-0" : "translate-x-full"}`}>
+                <ul className={`absolute w-full min-h-full flex flex-col justify-center text-center gap-10 transition-opacity duration-300 ease-in-out top-0 left-0 bg-gradient-to-r from-light-accent dark:from-dark-accent via-light-background dark:via-dark-background via-[percentage:15%_85%] to-light-accent dark:to-dark-accent ${menuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
                     <li>
                         <label htmlFor="menu-toggle" className="text-5xl md:text-5xl font-bold text-center cursor-pointer text-light-primary dark:text-dark-primary absolute left-5 top-5">x</label>
                     </li>

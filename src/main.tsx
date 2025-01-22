@@ -7,6 +7,7 @@ import Projects from './Pages/Projects/Projects';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router';
+import { ThemeProvider } from './context/ThemeContext';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>
 )

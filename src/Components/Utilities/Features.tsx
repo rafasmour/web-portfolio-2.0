@@ -1,5 +1,5 @@
 import React from 'react'
-import Title from '../Context/Title'
+import Title from '../Blocks/Title'
 import ThemeToggleButton from './ThemeToggleButton'
 
 const Features: React.FC = () => {

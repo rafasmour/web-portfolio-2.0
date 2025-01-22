@@ -1,4 +1,4 @@
-import Title from '../../Components/Context/Title'
+import Title from '../../Components/Blocks/Title'
 
 const Contact: React.FC = () => {
   return (
