@@ -5,7 +5,7 @@ import Title from "./Title";
 const GitRepoCard = ({ repo }: { repo: GitRepo }) => {
   return (
     <a href={repo.url} target="_blank" rel="noreferrer">
-        <div className="w-2/3 min-h-96 min-w-80 overflow-hidden mx-auto mb-4 grid grid-rows-12  border-2 text-left border-light-secondary dark:border-dark-secondary rounded-3xl hover:bg-light-accent hover:dark:bg-dark-accent hover:scale-105 transition-all duration-300">
+        <div className="w-2/3 min-h-full min-w-80 overflow-hidden mx-auto mb-4 grid grid-rows-12  border-2 text-left border-light-secondary dark:border-dark-secondary rounded-3xl hover:bg-light-accent hover:dark:bg-dark-accent hover:scale-105 transition-all duration-300">
             <div className="row-span-2 px-10 pt-2">
                 <Title context={repo.name} />
             </div>

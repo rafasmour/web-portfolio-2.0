@@ -9,15 +9,15 @@ const Footer: React.FC = () => {
   const tel: string = import.meta.env.VITE_TEL || '+1234567890';
   const location: string = import.meta.env.VITE_LOCATION || 'Unknown Location';
   const googleMapsUrl: string = "https://www.google.com/maps/place/" + location;
-  const linkedInUser: string = process.meta.env.VITE_LINKEDIN;
-  const githubUser: string = process.meta.env.VITE_GITHUB;
+  const linkedInUser: string = import.meta.env.VITE_LINKEDIN;
+  const githubUser: string = import.meta.env.VITE_GITHUB;
   const linkedinUrl: string = `https://www.linkedin.com/in/${linkedInUser}`;
   const githubUrl: string = `https://github.com/github/${githubUser}`;
 
   return (
     <footer className="w-full">
-      <div className="flex flex-row justify-around p-4">
-        <div className="flex flex-col justify-between">
+      <div className="flex flex-row justify-around items-center gap-16 p-4">
+        <div className="flex flex-col">
           <Title context="Contact" />
           <ul className="list-none">
             <li>
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col h-full items-start">
           <Title context="Social" />
           <ul className="list-none">
             <li>
@@ -54,6 +54,9 @@ const Footer: React.FC = () => {
                 <FontAwesomeIcon icon={faGithub} />
                 <span>GitHub</span>
               </a>
+            </li>
+            <li>
+              <br></br>
             </li>
           </ul>
         </div>
