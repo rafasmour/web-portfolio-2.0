@@ -1,4 +1,4 @@
-import { GitRepo } from "../../context/GitRepos";
+import { GitRepo } from "../../context/GitReposContext";
 import Paragraph from "./Paragraph";
 import SubTitle from "./SubTitle";
 import Title from "./Title";

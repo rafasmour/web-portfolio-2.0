@@ -3,7 +3,7 @@ import Footer from './Components/Layout/Footer'
 import { Outlet } from 'react-router'
 import Features from './Components/Utilities/Features'
 import { ThemeProvider } from './context/ThemeContext'
-import { GitReposProvider } from './context/GitRepos'
+import { GitReposProvider } from './context/GitReposContext'
 
 
 const Layout: React.FC = () => {

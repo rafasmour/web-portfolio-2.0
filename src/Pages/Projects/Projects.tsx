@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../../Components/Blocks/Title'
-import { useGitRepos } from '../../context/GitRepos'
+import { useGitRepos } from '../../context/GitReposContext'
 import GitRepoCard from '../../Components/Blocks/GitRepoCard';
 import Paragraph from '../../Components/Blocks/Paragraph';
 
