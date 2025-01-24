@@ -10,9 +10,8 @@
     animation: fadein 0.5s;
 }
 * {
-    @apply transition-colors duration-200 ease-linear appear;
+    @apply transition-colors duration-200 ease-linear appear font-Avant;
 }
-/* add the code bellow */
 @layer utilities {
     /* Hide scrollbar for Chrome, Safari and Opera */
     .no-scrollbar::-webkit-scrollbar {

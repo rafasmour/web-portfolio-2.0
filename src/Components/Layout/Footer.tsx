@@ -16,47 +16,47 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="w-full">
-      <div className="flex flex-row justify-around items-center gap-16 p-4">
-        <div className="flex flex-col">
-          <Title context="Contact" />
-          <ul className="list-none">
-            <li>
-              <a href={`mailto:${email}`} className="no-underline flex items-center space-x-2 text-lg text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
-                <FontAwesomeIcon icon={faEnvelope} />
-                <span>{email}</span>
-              </a>
-            </li>
-            <li>
-              <a href={`tel:${tel.trim()}`} className="no-underline flex items-center space-x-2 text-lg text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
-                <FontAwesomeIcon icon={faPhone} />
-                <span>{tel}</span>
-              </a>
-            </li>
-            <li>
-              <a href={googleMapsUrl} className="no-underline flex items-center space-x-2 text-lg text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
-                <FontAwesomeIcon icon={faMapMarkerAlt} />
-                <span>{location}</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div className="flex flex-col sm:flex-row justify-center sm:justify-around p-4">
         <div className="flex flex-col h-full items-start">
           <Title context="Social" />
-          <ul className="list-none">
+          <ul className="list-none text-center sm:text-left text-xl">
             <li>
-              <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="no-underline flex items-center space-x-2 text-lg text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
+              <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="no-underline flex items-center space-x-2   text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
                 <FontAwesomeIcon icon={faLinkedin} />
                 <span>LinkedIn</span>
               </a>
             </li>
             <li>
-              <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="no-underline flex items-center space-x-2 text-lg text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
+              <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="no-underline flex items-center space-x-2   text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
                 <FontAwesomeIcon icon={faGithub} />
                 <span>GitHub</span>
               </a>
             </li>
             <li>
               <br></br>
+            </li>
+          </ul>
+        </div>
+        <div className="flex flex-col">
+          <Title context="Contact" />
+          <ul className="list-none text-center sm:text-left text-xl">
+            <li>
+              <a href={`mailto:${email}`} className="no-underline flex items-center space-x-2   text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
+                <FontAwesomeIcon icon={faEnvelope} />
+                <span>{email}</span>
+              </a>
+            </li>
+            <li>
+              <a href={`tel:${tel.trim()}`} className="no-underline flex items-center space-x-2   text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
+                <FontAwesomeIcon icon={faPhone} />
+                <span>{tel}</span>
+              </a>
+            </li>
+            <li>
+              <a href={googleMapsUrl} className="no-underline flex items-center space-x-2   text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
+                <span>{location}</span>
+              </a>
             </li>
           </ul>
         </div>
