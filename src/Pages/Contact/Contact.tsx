@@ -1,16 +1,13 @@
-import Title from '../../Components/Blocks/Title'
+import React from 'react';
+import ContactForm from '../../Components/Form/ContactForm';
 
 const Contact: React.FC = () => {
-  return (
-    <>
-      <Title context="Contact" />
-      <form>
-        <input type="text" placeholder="email"/>
-        <input type="text" placeholder="subject"/>
-        
-      </form>
-    </>
-  )
-}
 
-export default Contact
+  return (
+    <div className="contact-form">
+      <ContactForm />
+    </div>
+  );
+};
+
+export default Contact;
