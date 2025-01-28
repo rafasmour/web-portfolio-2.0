@@ -8,7 +8,8 @@ const Nav: React.FC = () => {
     const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {
         setMenuOpen(e.target.checked);
     };
-    
+    const resumeLink: string = import.meta.env.VITE_LINK_TO_RESUME;
+    console.log(resumeLink);
     return (
         <>
             <nav>
@@ -29,7 +30,7 @@ const Nav: React.FC = () => {
                         <CustomNavigate to="/projects" context="Projects" />
                     </li>
                     <li onClick={() => setMenuOpen(false)}>
-                        <CustomNavigate to="/about" context="About" />
+                        <CustomNavigate to={resumeLink} context="About" />
                     </li>
                     <li onClick={() => setMenuOpen(false)}>
                         <CustomNavigate to="/contact" context="Contact" />

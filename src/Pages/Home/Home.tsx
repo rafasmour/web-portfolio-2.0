@@ -18,11 +18,11 @@ const Home: React.FC = () => {
     </section>
     <section>
       <SubTitle context="Key Skills & Technologies" />
-      <ul className="text-lg pl-4 text-center sm:text-left md:text-base text-light-parimary dark:text-dark-primary list-item" >
-        <li>JavaScript (Node.js, Vue.js, Express.js, Tailwind CSS)</li>
-        <li>Backend (Nest.js, PHP, Symfony, MongoDB, MySQL)</li>
-        <li>DevOps (Traefik, Docker)</li>
-        <li>Web (HTML, CSS, WordPress, Quasar.js)</li>
+      <ul className="text-xl pl-4 text-center sm:text-left md:text-base text-light-parimary dark:text-dark-primary list-item" >
+        <li className='text-xl'>JavaScript (Node.js, Vue.js, Express.js, Tailwind CSS)</li>
+        <li className='text-xl'>Backend (Nest.js, PHP, Symfony, MongoDB, MySQL)</li>
+        <li className='text-xl'>DevOps (Traefik, Docker)</li>
+        <li className='text-xl'>Web (HTML, CSS, WordPress, Quasar.js)</li>
       </ul>
     </section>
     <section className="text-center md:text-left">

@@ -13,7 +13,6 @@ const Footer: React.FC = () => {
   const githubUser: string = import.meta.env.VITE_GITHUB;
   const linkedinUrl: string = `https://www.linkedin.com/in/${linkedInUser}`;
   const githubUrl: string = `https://github.com/github/${githubUser}`;
-
   return (
     <footer className="w-full">
       <div className="flex flex-col sm:flex-row justify-center sm:justify-around p-4">
@@ -47,7 +46,8 @@ const Footer: React.FC = () => {
               </a>
             </li>
             <li>
-              <a href={`tel:${tel.trim()}`} className="no-underline flex items-center space-x-2   text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
+              
+              <a href={`tel:${tel.replace(/\s+/g, '')}`} className="no-underline flex items-center space-x-2   text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
                 <FontAwesomeIcon icon={faPhone} />
                 <span>{tel}</span>
               </a>
