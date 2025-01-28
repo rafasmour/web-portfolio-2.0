@@ -5,7 +5,7 @@ import ThemeToggleButton from './ThemeToggleButton'
 const Features: React.FC = () => {
   return (
     <>
-        <Title context="Features" /><br />
+        <Title context="Try it" /><br />
         <ThemeToggleButton/>
     </>
   )

@@ -20,6 +20,7 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
+          console.log(result);
           setStateMessage('Message sent!');
           setIsSubmitting(false);
           setTimeout(() => {
@@ -27,6 +28,7 @@ const ContactForm = () => {
           }, 5000); // hide message after 5 seconds
         },
         (error) => {
+          console.log(error);
           setStateMessage('Something went wrong, please try again later');
           setIsSubmitting(false);
           setTimeout(() => {
