@@ -1,21 +1,22 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Paragraph from '../../Components/Blocks/Paragraph'
 import SubTitle from '../../Components/Blocks/SubTitle'
 import Title from '../../Components/Blocks/Title'
+import { faGear } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
+import Introduction from '../../Components/Blocks/Introduction';
+import ExperienceProjectsBox from '../../Components/Blocks/ExperienceProjectsBox';
 
 const Home: React.FC = () => {
   const resumeLink: string = import.meta.env.VITE_LINK_TO_RESUME;
+  
   return (
     <>
     <section >
-      <Title context="Rafael mourouzidis" />
-      <Paragraph context="I’m a Junior Developer specializing in JavaScript, Node.js. 
-        I've also completed projects using TypeScript, Nest.js, Quasar.js, Vue.js, React.js, MongoDB, PHP, Symfony, 
-        MySQL, Traefik, Docker, WordPress, HTML, CSS, Express.js, and Tailwind CSS. I grew up in Patras.
-        I have been mentored by my older brother which is a Senior Magento Developer, we have done code reviews
-        to help me grow, while he never touched my code, we reviewed and we discussed about next step. I enjoy 
-        collaborating and thrive both in team settings and solo development. 
-        My focus includes problem-solving with algorithms, data structures, and an in-depth understanding 
-        of web technologies." />
+      <Introduction />
+    </section>
+    <section>
+      <ExperienceProjectsBox />
     </section>
     <section>
       <SubTitle context="Key Skills & Technologies" />

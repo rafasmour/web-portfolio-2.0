@@ -9,7 +9,6 @@ const Nav: React.FC = () => {
         setMenuOpen(e.target.checked);
     };
     const resumeLink: string = import.meta.env.VITE_LINK_TO_RESUME;
-    console.log(resumeLink);
     return (
         <>
             <nav>
