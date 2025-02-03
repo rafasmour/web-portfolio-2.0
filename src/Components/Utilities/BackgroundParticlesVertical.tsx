@@ -5,10 +5,10 @@ interface Particle {
   x: number;
   y: number;
   size: number;
-  speedX: number;
+  speedY: number;
 }
 
-const BackgroundParticles: React.FC = () => {
+const BackgroundParticlesVertical: React.FC = () => {
   const [particles, setParticles] = useState<Particle[]>([]);
   const animationFrameId = useRef<number>();
 
@@ -22,7 +22,7 @@ const BackgroundParticles: React.FC = () => {
             x: Math.random() * window.innerWidth,
             y: Math.random() * window.innerHeight,
             size: Math.random() * 15,
-            speedX: (Math.random() - 0.5) * 2 + 10,
+            speedY: Math.random() * 2,
           });
         }
         
@@ -33,13 +33,13 @@ const BackgroundParticles: React.FC = () => {
       setParticles(prevParticles => 
         prevParticles.map(particle => {
           
-          if (particle.x + particle.speedX > window.innerWidth){
-            particle.x=0;
+          if (particle.y + particle.speedY < 0){
+            particle.y=window.innerHeight;
           }
 
           return {
             ...particle,
-            x: particle.x + particle.speedX
+            y: particle.y - particle.speedY
           };
         })
       );
@@ -57,17 +57,17 @@ const BackgroundParticles: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none">
+    <div className="fixed inset-0 pointer-events-none z-0">
       {particles.map((particle) => (
         <div
           key={particle.id}
-          className="absolute rounded-full bg-light-secondary dark:bg-dark-secondary"
+          className="absolute rounded-full bg-light-accent dark:bg-dark-accent"
           style={{
             left: `${particle.x}px`,
             top: `${particle.y}px`,
             width: `${particle.size}px`,
             height: `${particle.size}px`,
-            transform: `translate(${particle.speedX}px)`,
+            transform: `translate(-${particle.speedY}px)`,
             transition: 'transform 0.1s linear',
             opacity:0.8
           }}
@@ -77,4 +77,4 @@ const BackgroundParticles: React.FC = () => {
   );
 };
 
-export default BackgroundParticles;
+export default BackgroundParticlesVertical;

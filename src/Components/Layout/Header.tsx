@@ -1,7 +1,7 @@
 import CustomNavigate from '../Utilities/CustomNavigate'
 import { ChangeEvent, useState } from "react";
 import ThemeToggleButton from '../Utilities/ThemeToggleButton';
-import BackgroundParticles from '../Utilities/BackgroundParticles';
+import BackgroundParticleHorizontal from '../Utilities/BackgroundParticlesHorizontal';
 
 const Nav: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -20,13 +20,10 @@ const Nav: React.FC = () => {
                         <label htmlFor="menu-toggle" className="text-5xl md:text-5xl font-bold text-center cursor-pointer text-light-primary dark:text-dark-primary absolute left-5 top-5">x</label>
                     </li>
                     <li>
-                        <BackgroundParticles />
+                        <BackgroundParticleHorizontal />
                     </li>
                     <li onClick={() => setMenuOpen(false)}>
                         <CustomNavigate to="/" context="Home" />
-                    </li>
-                    <li onClick={() => setMenuOpen(false)}>
-                        <CustomNavigate to="/projects" context="Projects" />
                     </li>
                     <li onClick={() => setMenuOpen(false)}>
                         <CustomNavigate to={resumeLink} context="About" />

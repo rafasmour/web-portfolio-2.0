@@ -4,7 +4,7 @@ import ContactForm from '../../Components/Form/ContactForm';
 const Contact: React.FC = () => {
 
   return (
-    <div className="contact-form">
+    <div className="my-10 h-72">
       <ContactForm />
     </div>
   );

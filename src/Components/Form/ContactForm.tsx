@@ -42,8 +42,8 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={sendEmail} className="w-full min-h-max-content flex flex-col space-y-4 border-4 border-light-accent dark:border-dark-accent p-4 rounded-lg">
-        <legend className="text-3xl text-center text-light-primary dark:text-dark-primary">Let's Contact</legend>
+    <form onSubmit={sendEmail} className="w-full flex flex-col space-y-4 border-4 border-light-accent dark:border-dark-accent p-4 rounded-lg focus:border-light-secondary dark:focus:border-dark-secondary transition-all">
+        <legend className="text-3xl text-center text-light-primary dark:text-dark-primary">Send me a message</legend>
       <InputText name="from_name" placeholder="Your name" />
       <InputText name="from_email" placeholder="Your email" />
       <textarea
