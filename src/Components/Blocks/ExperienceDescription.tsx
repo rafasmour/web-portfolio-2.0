@@ -1,4 +1,5 @@
 import React from 'react'
+import TechnologyBox from '../Utilities/TechnologyBox';
 interface JobDescriptionProps {
     title: string;
     description?: string;
@@ -9,7 +10,7 @@ interface JobDescriptionProps {
     duration?: string ;
 }
 
-const JobDescription: React.FC<JobDescriptionProps> = ({ title, description, location, technologies, website, company, duration }) => {
+const ExperienceDescription: React.FC<JobDescriptionProps> = ({ title, description, location, technologies, website, company, duration }) => {
   return (
     <li className="mb-10 ms-4 group">
       <div className="absolute w-3 h-3  rounded-full mt-2 -start-[7px] bg-light-secondary dark:bg-dark-secondary group-hover:bg-light-accent dark:group-hover:bg-dark-accent"></div>
@@ -17,12 +18,18 @@ const JobDescription: React.FC<JobDescriptionProps> = ({ title, description, loc
         <span className="text-xl text-left text-light-parimary dark:text-dark-primary group-hover:text-light-accent dark:group-hover:text-dark-accent">{title}</span>
         {
           (location && company && duration) 
-          ? (<span className="text-base text-light-secondary dark:text-dark-secondary group-hover:text-light-accent dark:group-hover:text-dark-accent">{duration} - {company} - {location}</span>)
+          ? (<span className="text-base text-light-secondary dark:text-dark-secondary group-hover:text-light-accent dark:group-hover:text-dark-accent">{duration} | {company} | {location}</span>)
           : (<span className="text-base text-left text-light-secondary dark:text-dark-secondary group-hover:text-light-accent dark:group-hover:text-dark-accent">{description}</span>)
         }
+        <span className="flex flex-row gap-2 flex-wrap">
+          {technologies?.map((technology) => (
+            <TechnologyBox technology={technology} />
+          ))}
+        </span>
       </a>
     </li>
+
   )
 }
 
-export default JobDescription
+export default ExperienceDescription

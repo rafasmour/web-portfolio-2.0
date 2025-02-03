@@ -1,6 +1,6 @@
 import Title from './Title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 function Introduction() {
@@ -11,6 +11,7 @@ function Introduction() {
     const githubUser: string = import.meta.env.VITE_GITHUB;
     const linkedinUrl: string = `https://www.linkedin.com/in/${linkedInUser}`;
     const githubUrl: string = `https://github.com/github/${githubUser}`;
+    const email: string = import.meta.env.VITE_EMAIL;
   return (
     <>  
         <Title context="Rafael mourouzidis" />
@@ -29,6 +30,9 @@ function Introduction() {
             </a>
             <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="no-underline flex p-2 items-center justify-center text-3xl    text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
             <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a href={`mailto:${email}`} target="_blank" className="no-underline flex p-2 items-center justify-center text-3xl    text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
+                <FontAwesomeIcon icon={faEnvelope} />
             </a>
         </div>
     </>

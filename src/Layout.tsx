@@ -1,9 +1,9 @@
 import Nav from './Components/Layout/Header'
-import Footer from './Components/Layout/Footer'
 import { Outlet } from 'react-router'
 import Features from './Components/Utilities/Features'
 import { ThemeProvider } from './context/ThemeContext'
 import { GitReposProvider } from './context/GitReposContext'
+import Footer from './Components/Layout/Footer'
 
 
 const Layout: React.FC = () => {
@@ -15,16 +15,13 @@ const Layout: React.FC = () => {
             <Features />
           </div>
           <div className="col-span-11 md:col-span-10">
-            <main className="p-10 min-h-lvh">
+            <main className="w-full md:w-[80%] mx-auto">
               <Outlet />
             </main>
-            <footer>
-              <Footer />
-            </footer>
+            <Footer />
           </div>
-          <header className="col-span-1 flex flex-col justify-between"> 
+          <header className="col-span-1"> 
             <Nav />
-            
           </header>
         </div>
       </GitReposProvider>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconType } from 'react-icons';
-import { SiNodedotjs, SiQuasar, SiNestjs, SiMongodb, SiCss3, SiMysql, SiTraefikproxy, SiHtml5, SiPhp, SiReact, SiVuedotjs , SiDocker, SiJavascript, SiTypescript } from 'react-icons/si';
+import { SiNodedotjs, SiTailwindcss, SiSymfony, SiQuasar, SiWordpress, SiNestjs, SiMongodb, SiCss3, SiMysql, SiTraefikproxy, SiHtml5, SiPhp, SiReact, SiVuedotjs , SiDocker, SiJavascript, SiTypescript } from 'react-icons/si';
 
 interface TechnologyIconProps {
   technology: string;
@@ -21,7 +21,9 @@ const iconMapping: { [key: string]: IconType } = {
   Mongo: SiMongodb,
   MySQL: SiMysql,
   NestJS: SiNestjs,
-
+  Wordpress: SiWordpress,
+  Symfony: SiSymfony,
+  TailWindCSS: SiTailwindcss,
   // Add more mappings as needed
 };
 

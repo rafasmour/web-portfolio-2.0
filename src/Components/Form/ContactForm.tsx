@@ -58,7 +58,7 @@ const ContactForm = () => {
         type="submit"
         value="Send"
         disabled={isSubmitting}
-        className="border-2 text-center w-32 p-2 rounded-2xl self-center md:self-start border-light-accent dark:border-dark-accent bg-transparent text-light-primary dark:text-dark-primary text-2xl font-bold cursor-pointer hover:bg-light-accent hover:dark:bg-dark-accent hover:text-light-primary hover:dark:text-dark-primary transition-all cursor-pointer"
+        className="border-2 text-center w-32 p-2 rounded-2xl self-center md:self-start border-light-accent dark:border-dark-accent bg-transparent text-light-primary dark:text-dark-primary text-2xl font-bold  hover:bg-light-accent hover:dark:bg-dark-accent hover:text-light-primary hover:dark:text-dark-primary transition-all cursor-pointer"
       />
       <SubTitle context={stateMessage}/>
     </form>

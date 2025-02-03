@@ -41,7 +41,7 @@ const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
 const GET_REPOS = gql`
 {
   user(login: "rafasmour") {
-    pinnedItems(first: 4) {
+    pinnedItems(first:10) {
       totalCount
       edges {
         node {
