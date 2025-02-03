@@ -1,9 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Paragraph from '../../Components/Blocks/Paragraph'
 import SubTitle from '../../Components/Blocks/SubTitle'
-import Title from '../../Components/Blocks/Title'
-import { faGear } from '@fortawesome/free-solid-svg-icons';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
 import Introduction from '../../Components/Blocks/Introduction';
 import ExperienceProjectsBox from '../../Components/Blocks/ExperienceProjectsBox';
 
@@ -15,7 +11,7 @@ const Home: React.FC = () => {
     <section >
       <Introduction />
     </section>
-    <section>
+    <section className="my-5">
       <ExperienceProjectsBox />
     </section>
     <section>
