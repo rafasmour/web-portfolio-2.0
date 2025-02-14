@@ -5,7 +5,6 @@ import { ThemeProvider } from './context/ThemeContext'
 import Footer from './Components/Layout/Footer'
 import BackgroundParticlesVertical from './Components/Utilities/BackgroundParticlesVertical'
 
-
 const Layout: React.FC = () => {
   return (
     <ThemeProvider>
