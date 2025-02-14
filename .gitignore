@@ -15,3 +15,5 @@
 !tsconfig.app.json
 !tsconfig.node.json
 !vite.config.json
+!dist
+!dist/**/*
