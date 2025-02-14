@@ -15,7 +15,7 @@ const Layout: React.FC = () => {
             <Features />
           </div>
           <div className="col-span-11 md:col-span-10 z-10">
-            <main className="w-full md:w-[80%] mx-auto h-[90%] z-10">
+            <main className="w-full md:w-[80%] mx-auto min-h-[80%] z-10">
               <Outlet />
             </main>
             <Footer />
