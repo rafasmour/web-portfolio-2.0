@@ -23,13 +23,13 @@ const Nav: React.FC = () => {
                         <BackgroundParticleHorizontal />
                     </li>
                     <li onClick={() => setMenuOpen(false)}>
-                        <CustomNavigate to="/" context="Home" />
+                        <CustomNavigate to="/web-portfolio-2.0/" context="Home" />
                     </li>
                     <li onClick={() => setMenuOpen(false)}>
                         <CustomNavigate to={resumeLink} context="About" />
                     </li>
                     <li onClick={() => setMenuOpen(false)}>
-                        <CustomNavigate to="/contact" context="Contact" />
+                        <CustomNavigate to="/web-portfolio-2.0/contact" context="Contact" />
                     </li>
                     <li>
                         <ThemeToggleButton />

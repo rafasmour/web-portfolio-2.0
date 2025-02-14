@@ -8,7 +8,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 const resumeLink: string = import.meta.env.VITE_LINK_TO_RESUME;
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path="/web-portfolio-2.0/" element={<Layout />}>
       <Route path='' element={<Home />} />
       <Route path={resumeLink} element={<Home />} />
       <Route path="contact" element={<Contact />} />
