@@ -23,6 +23,7 @@ const ContactForm = () => {
         (result) => {
           setStateMessage('Message sent!');
           setIsSubmitting(false);
+          console.log(result)
           setTimeout(() => {
             setStateMessage(null);
           }, 5000); // hide message after 5 seconds
