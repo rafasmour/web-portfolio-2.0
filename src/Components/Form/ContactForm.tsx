@@ -6,21 +6,21 @@ import SubTitle from '../Blocks/SubTitle';
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [stateMessage, setStateMessage] = useState<string | null>(null);
-
+  const serviceId: string = import.meta.env.VITE_MAILJS_SERVICE_ID
+  const templateId: string = import.meta.env.VITE_MAILJS_TEMPLATE_ID
+  const publicKey: string = import.meta.env.VITE_MAILJS_TEMPLATE_PUBLIC_KEY
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    console.log(e.target);
     emailjs
       .sendForm(
-        import.meta.env.VITE_MAILJS_SERVICE_ID,
-        import.meta.env.VITE_MAILJS_TEMPLATE_ID,
+        serviceId,
+        templateId,
         e.target as HTMLFormElement,
-        import.meta.env.VITE_MAILJS_TEMPLATE_PUBLIC_KEY,
+        publicKey,
       )
       .then(
         (result) => {
-          console.log(result);
           setStateMessage('Message sent!');
           setIsSubmitting(false);
           setTimeout(() => {
