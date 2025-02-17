@@ -30,7 +30,7 @@ jobs:
           VITE_GITHUB: ${{ secrets.VITE_GITHUB }}
           VITE_MAILJS_SERVICE_ID: ${{ secrets.VITE_MAILJS_SERVICE_ID }}
           VITE_MAILJS_TEMPLATE_ID: ${{ secrets.VITE_MAILJS_TEMPLATE_ID }}
-          VITE_MAINJS_TEMPLATE_PUBLIC_KEY: ${{ secrets.VITE_MAINJS_TEMPLATE_PUBLIC_KEY }}
+          VITE_MAILJS_TEMPLATE_PUBLIC_KEY: ${{ secrets.VITE_MAILJS_TEMPLATE_PUBLIC_KEY }}
           VITE_LINK_TO_RESUME: ${{ secrets.VITE_LINK_TO_RESUME }}
           VITE_FULL_NAME: ${{ secrets.VITE_FULL_NAME }}
           VITE_LINKEDIN: ${{ secrets.VITE_LINKEDIN }}
