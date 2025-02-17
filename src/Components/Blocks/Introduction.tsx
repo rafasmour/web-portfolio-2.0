@@ -10,7 +10,7 @@ function Introduction() {
     const linkedInUser: string = import.meta.env.VITE_LINKEDIN;
     const githubUser: string = import.meta.env.VITE_GITHUB;
     const linkedinUrl: string = `https://www.linkedin.com/in/${linkedInUser}`;
-    const githubUrl: string = `https://github.com/github/${githubUser}`;
+    const githubUrl: string = `https://github.com/${githubUser}`;
     const email: string = import.meta.env.VITE_EMAIL;
     const fullName: string = import.meta.env.VITE_FULL_NAME;
   return (

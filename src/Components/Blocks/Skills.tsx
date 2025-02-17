@@ -4,7 +4,7 @@ import Paragraph from './Paragraph';
 function Skills() {
     const frontEnd: string[] = ['ReactJS', 'VueJS', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'TailWindCSS'];
     const backEnd: string[] = ['NodeJS', 'NestJS', 'PHP', 'Symfony', 'MySQL', 'Mongo'];
-    const devOps: string[] = ['Docker', 'Traefik'];
+    const devOps: string[] = ['Docker', 'Traefik', 'Github Actions', 'Ansible'];
   return (
     <>
         <Paragraph context="Front-End" />
