@@ -16,13 +16,13 @@ const BackgroundParticleHorizontal: React.FC = () => {
     const initializeParticles = () => {
         const newParticles: Particle[] = [];
         
-        for(let i = 0; i < 40; i++) {
+        for(let i = 0; i < 20; i++) {
           newParticles.push({
             id: i,
             x: Math.random() * window.innerWidth,
             y: Math.random() * window.innerHeight,
             size: Math.random() * 15,
-            speedX: (Math.random() - 0.5) * 2 + 10,
+            speedX: (Math.random() - 0.5) * 2,
           });
         }
         
