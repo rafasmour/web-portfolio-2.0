@@ -12,9 +12,10 @@ function Introduction() {
     const linkedinUrl: string = `https://www.linkedin.com/in/${linkedInUser}`;
     const githubUrl: string = `https://github.com/github/${githubUser}`;
     const email: string = import.meta.env.VITE_EMAIL;
+    const fullName: string = import.meta.env.VITE_FULL_NAME;
   return (
     <>  
-        <Title context="Rafael mourouzidis" />
+        <Title context={fullName} />
         <p className="no-underline flex items-center justify-center md:justify-start   text-light-primary dark:text-dark-primary hover:text-light-accent hover:dark:text-dark-accent">
             <span className="text-center md:text-left">Junior full-stack developer</span>
         </p>
