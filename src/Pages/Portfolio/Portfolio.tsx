@@ -7,7 +7,7 @@ const Portfolio: React.FC = () => {
     return (
         <>
             <Title context="Portfolio" />
-            <SubTitle context="Sites I have developed on my own" />
+            <SubTitle context="Sites I developed on my own" />
             <div>
                 <ol className="relative border-l-2 border-light-secondary dark:border-dark-secondary ml-4 py-2">
                     <li><ExperienceDescription title={"WaterIQ"} website={"https://www.wateriq.gr"} company={"Omega Systems"} technologies={['Wordpress', 'JavaScript', 'PHP', 'HTML', 'CSS']}   /></li>
