@@ -1,10 +1,7 @@
 import TechnologyBox from '../Utilities/TechnologyBox';
 import Paragraph from './Paragraph';
-import {useSkills} from "../../context/SkillsContext.tsx";
 
 function Skills() {
-    const hey = useSkills();
-    console.log(hey);
     const frontEnd: string[] = ['ReactJS', 'VueJS', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'TailWindCSS'];
     const backEnd: string[] = ['NodeJS', 'NestJS', 'PHP', 'Symfony', 'MySQL', 'Mongo'];
     const devOps: string[] = ['Docker', 'Traefik', 'Github Actions', 'Ansible'];
