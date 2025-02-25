@@ -33,8 +33,8 @@ const BackgroundParticlesVertical: React.FC = () => {
       setParticles(prevParticles => 
         prevParticles.map(particle => {
           
-          if (particle.y + particle.speedY < 0){
-            particle.y=window.innerHeight;
+          if (particle.y + particle.speedY < -10){
+            particle.y=window.innerHeight - 10;
           }
 
           return {

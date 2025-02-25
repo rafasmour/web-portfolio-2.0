@@ -4,10 +4,12 @@ import Features from './Components/Utilities/Features'
 import { ThemeProvider } from './context/ThemeContext'
 import Footer from './Components/Layout/Footer'
 import BackgroundParticlesVertical from './Components/Utilities/BackgroundParticlesVertical'
+import {SkillsProvider} from "./context/SkillsContext.tsx";
 
 const Layout: React.FC = () => {
   return (
     <ThemeProvider>
+      <SkillsProvider>
         <BackgroundParticlesVertical />
         <div className="grid max-sm:grid-rows-20 sm:grid-cols-12 w-full max-sm:p-2  m-0 min-h-screen bg-gradient-to-b from-light-accent dark:from-dark-accent via-light-background dark:via-dark-background via-[percentage:20%_95%] to-light-accent dark:to-dark-accent z-10">
           <div className="hidden md:flex md:flex-col md:col-span-1 items:start items-center p-2 z-10">
@@ -19,10 +21,11 @@ const Layout: React.FC = () => {
             </main>
             <Footer />
           </div>
-          <header className="max-sm:row-start-1 max-sm:row-span-1  sm:col-span-1 z-10 "> 
+          <header className="max-sm:row-start-1 max-sm:row-span-1  sm:col-span-1 z-10 ">
             <Nav />
           </header>
         </div>
+      </SkillsProvider>
     </ThemeProvider>
   )
 }

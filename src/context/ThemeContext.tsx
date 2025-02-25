@@ -11,8 +11,8 @@ type ThemeContextType = {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export const ThemeProvider = ({ children }: ThemeContextProviderProps) => {
-  const systemDefaultTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+export const ThemeProvider   = ({ children }: ThemeContextProviderProps) => {
+  const systemDefaultTheme: boolean = window.matchMedia('(prefers-color-scheme: dark)').matches ?? false;
   const [dark, setDark] = useState<boolean>(systemDefaultTheme);
 
   useEffect(() => {

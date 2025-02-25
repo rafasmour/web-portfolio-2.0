@@ -4,7 +4,7 @@ import ExperienceDescription from './ExperienceDescription';
 function ExperienceProjectsBox() {
     const [toggleExperience, setToggleExperience] = useState<boolean>(true);
     return (
-        <div className='mx-auto h-72 grid grid-rows-12 grid-cols-12 border-2 rounded-3xl overflow-hidden border-light-secondary dark:border-dark-secondary bg-light-background dark:bg-dark-background'>
+        <div className='mx-auto h-80 grid grid-rows-12 grid-cols-12 border-2 rounded-3xl overflow-hidden border-light-secondary dark:border-dark-secondary bg-light-background dark:bg-dark-background'>
             <div className="col-span-12 row-span-2 grid grid-cols-2">
                 <div className="cursor-pointer col-span-1 flex items-center justify-center border border-light-secondary dark:border-dark-secondary text-2xl text-light-primary dark:text-dark-primary hover:bg-light-secondary dark:hover:bg-dark-secondary hover:text-light-background dark:hover:text-dark-background" onClick={ () => setToggleExperience(true)}>Experience</div>
                 <div className="cursor-pointer col-span-1 flex items-center justify-center border border-light-secondary dark:border-dark-secondary text-2xl text-light-primary dark:text-dark-primary hover:bg-light-secondary dark:hover:bg-dark-secondary hover:text-light-background dark:hover:text-dark-background" onClick={ () => setToggleExperience(false)}>Projects</div>

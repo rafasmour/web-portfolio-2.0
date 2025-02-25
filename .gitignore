@@ -4,6 +4,7 @@
 !.github/**/* 
 !public
 !src
+!src/**/*
 !.env.sample
 !.gitignore
 !.eslint.config.js
