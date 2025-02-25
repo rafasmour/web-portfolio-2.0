@@ -4,14 +4,14 @@ type SkillsContextProviderProps = {
 }
 
 type SkillsContextType = {
-    skills: [Object];
+    skills: Object[] | undefined;
 }
 
 const SkillsContext = createContext<SkillsContextType | undefined>(undefined);
 
 
 export const SkillsProvider = ({ children }: SkillsContextProviderProps) => {
-    const [skills, setSkills] = useState<Object[]>([]);
+    const [skills, setSkills] = useState<Object[] | undefined>(undefined);
     useEffect(() => {
         const fetchSkills: ()=> Promise<void> = async () => {
             try {
