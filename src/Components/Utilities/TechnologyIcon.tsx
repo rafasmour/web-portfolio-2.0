@@ -1,6 +1,27 @@
 import React from 'react';
 import { IconType } from 'react-icons';
-import { SiNodedotjs, SiTailwindcss, SiSymfony, SiQuasar, SiWordpress, SiNestjs, SiMongodb, SiCss3, SiMysql, SiTraefikproxy, SiHtml5, SiPhp, SiReact, SiVuedotjs , SiDocker, SiJavascript, SiTypescript, SiGithubactions, SiAnsible } from 'react-icons/si';
+import {
+  SiNodedotjs,
+  SiTailwindcss,
+  SiSymfony,
+  SiQuasar,
+  SiWordpress,
+  SiNestjs,
+  SiMongodb,
+  SiCss3,
+  SiMysql,
+  SiTraefikproxy,
+  SiHtml5,
+  SiPhp,
+  SiReact,
+  SiVuedotjs,
+  SiDocker,
+  SiJavascript,
+  SiTypescript,
+  SiGithubactions,
+  SiAnsible,
+  SiShadcnui, SiRadixui, SiPython, SiDjango, SiReacthookform, SiReactquery, SiZod
+} from 'react-icons/si';
 
 interface TechnologyIconProps {
   technology: string;
@@ -26,6 +47,13 @@ const iconMapping: { [key: string]: IconType } = {
   'TailWindCSS': SiTailwindcss,
   'Github Actions': SiGithubactions,
   'Ansible': SiAnsible,
+  'ShadCN': SiShadcnui,
+  "RadixUI": SiRadixui,
+  "Python": SiPython,
+  "Django": SiDjango,
+  'ReactHookForm': SiReacthookform,
+  'ReactQuery': SiReactquery,
+  'Zod': SiZod,
   // Add more mappings as needed
 };
 

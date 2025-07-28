@@ -2,8 +2,8 @@ import TechnologyBox from '../Utilities/TechnologyBox';
 import Paragraph from './Paragraph';
 
 function Skills() {
-    const frontEnd: string[] = ['ReactJS', 'VueJS', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'TailWindCSS'];
-    const backEnd: string[] = ['NodeJS', 'NestJS', 'PHP', 'Symfony', 'MySQL', 'Mongo'];
+    const frontEnd: string[] = ['ReactJS', 'VueJS', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'TailWindCSS', 'ShadCN', 'RadixUI', 'QuasarJS'];
+    const backEnd: string[] = ['NodeJS', 'NestJS', 'PHP', 'Symfony', 'MySQL', 'Mongo', 'Django', 'Python'];
     const devOps: string[] = ['Docker', 'Traefik', 'Github Actions', 'Ansible'];
   return (
     <>
