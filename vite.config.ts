@@ -8,16 +8,4 @@ export default defineConfig({
       react(),
       nodePolyfills(),
   ],
-  server: {
-      cors: true,
-      port: 80,
-      host: true,
-      strictPort: true,
-      hmr: {
-          host: `${process.env.DOMAIN}`,
-          protocol: "wss",
-          clientPort: 443,
-      },
-      watch: { usePolling: true }
-  },
 })
