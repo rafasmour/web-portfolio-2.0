@@ -14,7 +14,7 @@ export default defineConfig({
       host: true,
       strictPort: true,
       hmr: {
-          host: `portfolio.${process.env.DOMAIN}`,
+          host: `${process.env.DOMAIN}`,
           protocol: "wss",
           clientPort: 443
       },
