@@ -53,7 +53,7 @@ jobs:
           export DISPLAY=:0
           setsid ssh-add /home/runner/.ssh/id_rsa < /dev/null
           ssh -o StrictHostKeyChecking=no -v ${USER}@${VPS_IP} \
-          "DOMAIN='${DOMAIN}' NETWORK='${NETWORK}' bash -s" << 'EOF'
+          "DOMAIN='${DOMAIN}' NETWORK='${NETWORK}' VITE_EMAIL='${VITE_EMAIL}' VITE_TEL='${VITE_TEL}' VITE_LOCATION='${VITE_LOCATION}' VITE_GITHUB='${VITE_GITHUB}' VITE_MAILJS_SERVICE_ID='${VITE_MAILJS_SERVICE_ID}' VITE_MAILJS_TEMPLATE_ID='${VITE_MAILJS_TEMPLATE_ID}' VITE_MAILJS_TEMPLATE_PUBLIC_KEY='${VITE_MAILJS_TEMPLATE_PUBLIC_KEY}' VITE_LINK_TO_RESUME='${VITE_LINK_TO_RESUME}' VITE_FULL_NAME='${VITE_FULL_NAME}' VITE_LINKEDIN='${VITE_LINKEDIN}' bash -s" << 'EOF'
           set -x
           cd /home/${USER}/ || exit 1
           if [ ! -d "web-portfolio-2.0" ]; then
