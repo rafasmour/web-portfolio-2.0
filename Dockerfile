@@ -4,4 +4,6 @@ WORKDIR ./app
 
 COPY . .
 
+CMD ["npm", "run", "build"]
+
 EXPOSE 80
