@@ -1,5 +1,88 @@
-name: deploy-vps.yml
-on:
+name: deploy
+
+"on":
   workflow_dispatch:
+  push:
+    branches:
+      - main
+
 jobs:
-  
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Alpine
+        uses: jirutka/setup-alpine@v1
+        with:
+          branch: "v3.19"
+          packages: >
+            openssh
+
+      - name: Verify Alpine Release
+        run: cat /etc/alpine-release
+        shell: alpine.sh {0}
+
+      - uses: ./.github/actions/ssh
+        with:
+          host: ${{ secrets.VPS_IP }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+
+      - name: Cache ssh key passphrase & Run Deployment
+        env:
+          SSH_PASSPHRASE: ${{ secrets.DEPLOY_SSH_PASSPHRASE }}
+          USER: ${{ secrets.USER }}
+          VPS_IP: ${{ secrets.VPS_IP }}
+          NETWORK: ${{ secrets.NETWORK }}
+          DOMAIN: ${{ secrets.DOMAIN }}
+          VITE_EMAIL: ${{ secrets.VITE_EMAIL }}
+          VITE_TEL: ${{ secrets.VITE_TEL }}
+          VITE_LOCATION: ${{ secrets.VITE_LOCATION }}
+          VITE_GITHUB: ${{ secrets.VITE_GITHUB }}
+          VITE_MAILJS_SERVICE_ID: ${{ secrets.VITE_MAILJS_SERVICE_ID }}
+          VITE_MAILJS_TEMPLATE_ID: ${{ secrets.VITE_MAILJS_TEMPLATE_ID }}
+          VITE_MAILJS_TEMPLATE_PUBLIC_KEY: ${{ secrets.VITE_MAILJS_TEMPLATE_PUBLIC_KEY }}
+          VITE_LINK_TO_RESUME: ${{ secrets.VITE_LINK_TO_RESUME }}
+          VITE_FULL_NAME: ${{ secrets.VITE_FULL_NAME }}
+          VITE_LINKEDIN: ${{ secrets.VITE_LINKEDIN }}
+        shell: alpine.sh --root {0}
+        run: |
+          eval "$(ssh-agent -s)"
+          echo -e '#!/bin/sh\necho "$SSH_PASSPHRASE"' > ./askpass.sh
+          chmod +x ./askpass.sh
+          export SSH_ASKPASS=./askpass.sh
+          export DISPLAY=:0
+          setsid ssh-add /home/runner/.ssh/id_rsa < /dev/null
+          ssh -o StrictHostKeyChecking=no -v ${USER}@${VPS_IP} \
+          "DOMAIN='${DOMAIN}' NETWORK='${NETWORK}' bash -s" << 'EOF'
+          set -x
+          cd /home/${USER}/ || exit 1
+          if [ ! -d "web-portfolio-2.0" ]; then
+          git clone https://github.com/rafasmour/web-portfolio-2.0.git|| exit 1
+          fi
+          cd web-portfolio-2.0 || exit 1
+          git pull || exit 1
+          rm .env
+          touch .env
+          echo "DOMAIN=${DOMAIN}" >> .env
+          echo "NETWORK=${NETWORK}" >> .env
+          echo "VITE_EMAIL=${VITE_EMAIL}" >> .env
+          echo "VITE_TEL=${VITE_TEL}" >> .env
+          echo "VITE_LOCATION=${VITE_LOCATION}" >> .env
+          echo "VITE_GITHUB=${VITE_GITHUB}" >> .env
+          echo "VITE_MAILJS_SERVICE_ID=${VITE_MAILJS_SERVICE_ID}" >> .env
+          echo "VITE_MAILJS_TEMPLATE_ID=${VITE_MAILJS_TEMPLATE_ID}" >> .env
+          echo "VITE_MAILJS_TEMPLATE_PUBLIC_KEY=${VITE_MAILJS_TEMPLATE_PUBLIC_KEY}" >> .env
+          echo "VITE_LINK_TO_RESUME=${VITE_LINK_TO_RESUME}" >> .env
+          echo "VITE_FULL_NAME=${VITE_FULL_NAME}" >> .env
+          echo "VITE_LINKEDIN=${VITE_LINKEDIN}" >> .env
+          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+          \. "$HOME/.nvm/nvm.sh"
+          nvm install 22
+          cd api || exit 1
+          npm install || exit 1
+          cd ../app || exit 1
+          npm install || exit 1
+          cd .. || exit 1
+          docker compose -f docker-compose.prod.yml down --remove-orphans || exit 1
+          docker compose -f docker-compose.prod.yml up -d --build --force-recreate || exit 1
+          EOF
