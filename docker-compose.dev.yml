@@ -7,16 +7,13 @@ services:
     env_file: ".env"
     labels:
       - traefik.enable=true
-      - traefik.http.routers.portfolio.rule=Host(`portfolio.${DOMAIN}`)
+      - traefik.http.routers.portfolio.rule=Host(`${DOMAIN}`)
       - traefik.http.routers.portfolio.entrypoints=websecure
       - traefik.http.routers.portfolio.tls=true
       - traefik.http.routers.portfolio.tls.certresolver=myresolver
     networks:
       - webgateway
     command: "npm run dev"
-    volumes:
-      - ./:/app
-    working_dir: /app
 networks:
   webgateway:
     name: ${NETWORK}
