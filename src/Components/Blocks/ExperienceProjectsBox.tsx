@@ -63,39 +63,25 @@ const workExperience : Experience[] = [
 
 const projectsExperience : Experience[] = [
     {
-        title: "Campaign Monitor List",
+        title: "Emoji Draw",
         company: "Personal Project",
-        website: "https://github.com/rafasmour/campaign-monitor-list.git",
-        description: "A simple SPA that allows you to manage your Campaign Monitor subsribers connected via API",
-        technologies: ['JavaScript', 'ReactJS', 'TailWindCSS', 'Docker', 'HTML', 'CSS'],
+        website: "https://github.com/rafasmour/emoji-draw",
+        description: "a real-time multiplayer game where players guess a term based on what another player draws on the canvas using emojis",
+        technologies: ['Laravel', 'PHP', 'ReactJS', 'InertiaJS', 'TypeScript', 'TailWindCSS', 'ShadCN', 'Mongo', 'Docker'],
     },
     {
-        title: "Git Auto Changelog",
+        title: "Homelab",
         company: "Personal Project",
-        website: "https://github.com/rafasmour/github-auto-changelog.git",
-        description: "A single page application responsible for automating the generation of a CHANGELOG.md FILE",
-        technologies: ['TypeScript', 'ReactJS', 'TailWindCSS', 'Docker', 'HTML', 'CSS'],
+        website: "https://github.com/rafasmour/homelab",
+        description: "self-hosted services as independent Docker Compose stacks behind Traefik, with monitoring, shared databases and local AI",
+        technologies: ['Docker', 'Traefik', 'Linux', 'Grafana', 'Prometheus', 'PostgreSQL', 'MariaDB'],
     },
     {
-        title: "Task Simulator",
+        title: "Portfolio 2.0",
         company: "Personal Project",
-        website: "https://github.com/rafasmour/task-simulator.git",
-        description: "a simple algorithm that simulates a working day and returns reports based on the data given, useful for getting insights on your workload.",
-        technologies: ["TypeScript", "NodeJS"],
-    },
-    {
-           title: "Portfolio 2.0",
-            company: "Personal Project",
-            website: "https://github.com/rafasmour/web-portfolio-2.0.git",
+        website: "https://github.com/rafasmour/web-portfolio-2.0",
         description: "the website you are currently viewing",
-        technologies: ['ReactJS', 'TypeScript', 'TailWindCSS', 'Docker', 'Traefik', 'HTML', 'CSS'],
-    },
-    {
-        title: "Todo Full Stack",
-        company: "Personal Project",
-        website: "https://github.com/rafasmour/todo-full-stack",
-        description: "a todo application with a complete stack: NestJS CRUD API, QuasarJS front-end, MongoDB, containerized with Docker behind Traefik",
-        technologies: ['Traefik', 'Docker', 'QuasarJS', 'VueJS', 'NodeJS', 'TypeScript', 'Mongo', 'HTML', 'CSS'],
+        technologies: ['ReactJS', 'TypeScript', 'TailWindCSS', 'Docker', 'Traefik', 'Github Actions'],
     },
     {
         title: "Ansible Playbook",
@@ -105,11 +91,18 @@ const projectsExperience : Experience[] = [
         technologies: ['Ansible', 'Github Actions', 'Docker', 'Traefik', 'Linux'],
     },
     {
-        title: "Ever Running Cube",
+        title: "Task Simulator",
         company: "Personal Project",
-        website: "https://github.com/rafasmour/ever-running-cube",
-        description: "a simple endless running game made with javascript",
-        technologies: ['JavaScript', 'NodeJS', 'HTML', 'CSS'],
+        website: "https://github.com/rafasmour/task-simulator",
+        description: "a simple algorithm that simulates a working day and returns reports based on the data given, useful for getting insights on your workload.",
+        technologies: ["TypeScript", "NodeJS"],
+    },
+    {
+        title: "Git Auto Changelog",
+        company: "Personal Project",
+        website: "https://github.com/rafasmour/github-auto-changelog",
+        description: "A single page application responsible for automating the generation of a CHANGELOG.md FILE",
+        technologies: ['TypeScript', 'ReactJS', 'TailWindCSS', 'Docker', 'HTML', 'CSS'],
     },
 ]
 function ExperienceProjectsBox() {

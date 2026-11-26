@@ -21,7 +21,8 @@ import {
   SiGithubactions,
   SiAnsible,
   SiShadcnui, SiRadixui, SiPython, SiDjango, SiReacthookform, SiReactquery, SiZod,
-  SiLaravel, SiFilament, SiLivewire, SiInertia, SiPlesk, SiLinux, SiGit
+  SiLaravel, SiFilament, SiLivewire, SiInertia, SiPlesk, SiLinux, SiGit,
+  SiGrafana, SiPrometheus, SiPostgresql, SiMariadb
 } from 'react-icons/si';
 
 interface TechnologyIconProps {
@@ -62,6 +63,10 @@ const iconMapping: { [key: string]: IconType } = {
   'Plesk': SiPlesk,
   'Linux': SiLinux,
   'Git': SiGit,
+  'Grafana': SiGrafana,
+  'Prometheus': SiPrometheus,
+  'PostgreSQL': SiPostgresql,
+  'MariaDB': SiMariadb,
   // Add more mappings as needed
 };
 
