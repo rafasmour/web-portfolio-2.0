@@ -20,7 +20,8 @@ import {
   SiTypescript,
   SiGithubactions,
   SiAnsible,
-  SiShadcnui, SiRadixui, SiPython, SiDjango, SiReacthookform, SiReactquery, SiZod
+  SiShadcnui, SiRadixui, SiPython, SiDjango, SiReacthookform, SiReactquery, SiZod,
+  SiLaravel, SiFilament, SiLivewire, SiInertia, SiPlesk, SiLinux, SiGit
 } from 'react-icons/si';
 
 interface TechnologyIconProps {
@@ -54,6 +55,13 @@ const iconMapping: { [key: string]: IconType } = {
   'ReactHookForm': SiReacthookform,
   'ReactQuery': SiReactquery,
   'Zod': SiZod,
+  'Laravel': SiLaravel,
+  'FilamentPHP': SiFilament,
+  'Livewire': SiLivewire,
+  'InertiaJS': SiInertia,
+  'Plesk': SiPlesk,
+  'Linux': SiLinux,
+  'Git': SiGit,
   // Add more mappings as needed
 };
 

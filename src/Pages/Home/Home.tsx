@@ -17,8 +17,7 @@ const Home: React.FC = () => {
       <SubTitle context="Skills and Technologies" />
       <Skills />
       <SubTitle context="More about me..." />
-      <Paragraph context=" I am 21 years old. I grew up in Patras, located at Western Greece. I’ve graduated from Patras' Vocational training institute as an IT application technician. I’ve fulfilled my army obligations with no penalties. I enjoy Software development, specifically the department of web applications. I am a fan of creativity, innovation and adaptation. I adapt to change easily and I am eager to learn more about web technologies. I also have a hobby of drawing and singing in my free time.
-      "/>
+      <Paragraph context="I grew up in Patras, located at Western Greece, and graduated from Patras' Vocational Institute as an IT application engineer (GPA 9.3/10). I have a strong understanding of web technologies and I am thriving in both frontend and backend development, currently building full stack platforms with Laravel, React and FilamentPHP. I am now exploring DevOps technologies like CI/CD, containerization and reverse proxies, and I am eager to learn more. I also have a hobby of drawing and singing in my free time." />
     </>
       
   )

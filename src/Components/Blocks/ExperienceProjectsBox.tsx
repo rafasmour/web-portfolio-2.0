@@ -12,7 +12,15 @@ type Experience = {
 }
 const workExperience : Experience[] = [
     {
-        title: "Junior Software Engineer",
+        title: "Junior Fullstack Developer (Freelance)",
+        duration: "Oct 2025 - Present",
+        company: "Yoltlabs",
+        website: "https://yoltlabs.com",
+        location: "Remote",
+        technologies: ['PHP', 'Laravel', 'FilamentPHP', 'Livewire', 'ReactJS', 'InertiaJS', 'TypeScript', 'TailWindCSS', 'MySQL', 'Ploi']
+    },
+    {
+        title: "Junior Software Engineer (Contractor)",
         duration: "Apr 2025 - Jul 2025",
         company: "Margera",
         website: "https://margera.co",
@@ -21,7 +29,7 @@ const workExperience : Experience[] = [
     },
     {
         title: "Junior Developer",
-        duration: "Sep 2025 - Mar 2025",
+        duration: "Sep 2024 - Mar 2025",
         company: "Datum",
         website: "https://datum.gr",
         location: "Patras, Greece",
@@ -85,9 +93,16 @@ const projectsExperience : Experience[] = [
     {
         title: "Todo Full Stack",
         company: "Personal Project",
-        website: "https://github.com/rafasmour/web-portfolio-2.0",
-        description: "a todo application with a complete stack",
+        website: "https://github.com/rafasmour/todo-full-stack",
+        description: "a todo application with a complete stack: NestJS CRUD API, QuasarJS front-end, MongoDB, containerized with Docker behind Traefik",
         technologies: ['Traefik', 'Docker', 'QuasarJS', 'VueJS', 'NodeJS', 'TypeScript', 'Mongo', 'HTML', 'CSS'],
+    },
+    {
+        title: "Ansible Playbook",
+        company: "Personal Project",
+        website: "https://github.com/rafasmour/vps-playbook",
+        description: "an Ansible playbook that automatically deploys my VPS through GitHub Actions",
+        technologies: ['Ansible', 'Github Actions', 'Docker', 'Traefik', 'Linux'],
     },
     {
         title: "Ever Running Cube",

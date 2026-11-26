@@ -6,13 +6,13 @@ import Home from './Pages/Home/Home';
 import Contact from './Pages/Contact/Contact';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router';
 import Portfolio from "./Pages/Portfolio/Portfolio.tsx";
-const resumeLink: string = import.meta.env.VITE_LINK_TO_RESUME;
+import Cv from "./Pages/Cv/Cv.tsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path='' element={<Home />} />
       <Route path='portfolio' element={<Portfolio />} />
-      <Route path={resumeLink} element={<Home />} />
+      <Route path='cv' element={<Cv />} />
       <Route path="contact" element={<Contact />} />
     </Route>
   )

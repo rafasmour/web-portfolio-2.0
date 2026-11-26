@@ -2,9 +2,9 @@ import TechnologyBox from '../Utilities/TechnologyBox';
 import Paragraph from './Paragraph';
 
 function Skills() {
-    const frontEnd: string[] = ['ReactJS', 'VueJS', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'TailWindCSS', 'ShadCN', 'RadixUI', 'QuasarJS'];
-    const backEnd: string[] = ['NodeJS', 'NestJS', 'PHP', 'Symfony', 'MySQL', 'Mongo', 'Django', 'Python'];
-    const devOps: string[] = ['Docker', 'Traefik', 'Github Actions', 'Ansible'];
+    const frontEnd: string[] = ['ReactJS', 'VueJS', 'InertiaJS', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'TailWindCSS', 'ShadCN', 'RadixUI', 'ReactQuery', 'ReactHookForm', 'Zod', 'QuasarJS', 'Wordpress'];
+    const backEnd: string[] = ['PHP', 'Laravel', 'FilamentPHP', 'Livewire', 'Symfony', 'Python', 'Django', 'NodeJS', 'NestJS', 'MySQL', 'Mongo'];
+    const devOps: string[] = ['Git', 'Docker', 'Traefik', 'Linux', 'SSH', 'Plesk', 'Ploi', 'Github Actions', 'Ansible'];
   return (
     <>
         <Paragraph context="Front-End" />
