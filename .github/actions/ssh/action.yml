@@ -16,9 +16,10 @@ runs:
       env:
         SSH_PRIVATE_KEY: ${{ inputs.DEPLOY_SSH_KEY }}
         HOST: ${{ inputs.host }}
-      shell: bash
+      shell: alpine.sh --root {0}
       run: |
         mkdir -p /home/runner/.ssh
+        apk update
         echo "$SSH_PRIVATE_KEY" > /home/runner/.ssh/id_rsa
         chmod 600 /home/runner/.ssh/id_rsa
         touch /home/runner/.ssh/known_hosts
