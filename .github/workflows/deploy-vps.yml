@@ -11,17 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Alpine
-        uses: jirutka/setup-alpine@v1
-        with:
-          branch: "v3.19"
-          packages: >
-            openssh
-
-      - name: Verify Alpine Release
-        run: cat /etc/alpine-release
-        shell: alpine.sh {0}
-
       - uses: ./.github/actions/ssh
         with:
           host: ${{ secrets.VPS_IP }}
@@ -44,7 +33,7 @@ jobs:
           VITE_LINK_TO_RESUME: ${{ secrets.VITE_LINK_TO_RESUME }}
           VITE_FULL_NAME: ${{ secrets.VITE_FULL_NAME }}
           VITE_LINKEDIN: ${{ secrets.VITE_LINKEDIN }}
-        shell: alpine.sh --root {0}
+        shell: bash
         run: |
           eval "$(ssh-agent -s)"
           echo -e '#!/bin/sh\necho "$SSH_PASSPHRASE"' > ./askpass.sh
